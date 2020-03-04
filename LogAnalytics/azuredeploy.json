@@ -16,20 +16,14 @@
                 "displayName": "Log retention in days",
                 "description": "Number of days data will be retained for"
             }
-        },
-        "WorkspaceName": {
-           "type": "string",
-           "metadata": {
-                "description": "Enter the name for the Log Analytics Workspace"
-            },
-            "defaultValue": "PPC-LogAnalytics"
         }
     },
     "variables": {
+        "default-workspacename": "PPC-LogAnalytics",
         "deployment-suffix": "[parameters('OrganizationAbbreviation')]",
         "diagnostic-storageAccount-prefix": "ppceventstorage001",
         "diagnostic-storageAccount-name": "[toLower(substring(replace(concat(variables('diagnostic-storageAccount-prefix'), variables('deployment-suffix')), '-', ''), 0, 22) )]",
-        "oms-workspace-name": "[parameters('WorkspaceName')]"
+        "oms-workspace-name": "[concat(variables('default-workspacename'),'-',parameters('OrganizationAbbreviation'))]"
     },
     "resources": [
         {

@@ -10,7 +10,7 @@ When using this ARM template, it will also provide the following features:
 * Set a resource lock on both Log Analytics workspace and storage account to prevent accidental deletion
 * Set the Log Analytics [SKU][LA-Sku] to Per-GB
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F100-blank-template%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fpowershellpr0mpt%2fARMTemplates%2fmaster%2fLogAnalytics%2fazuredeploy.json" target="_blank">
 <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
 </a>
 

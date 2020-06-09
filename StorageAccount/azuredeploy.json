@@ -2,6 +2,12 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "storageAccountName": {
+            "type": "string",
+            "metadata": {
+                "description": "Provide a storage account name. Must be unique name"
+            }
+        }
     },
     "functions": [
     ],
@@ -11,7 +17,7 @@
         {
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2018-07-01",
-            "name": "TestStorage",
+            "name": "[parameters('storageAccountName')]",
             "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "Storage Account"
